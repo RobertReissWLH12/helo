@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 import { connect } from 'react-redux'
+import {updateUser, clearUser} from "../../ducks/reducer"
 import axios from 'axios';
 
 class Nav extends Component {

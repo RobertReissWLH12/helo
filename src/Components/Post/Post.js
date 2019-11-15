@@ -1,15 +1,18 @@
 import React, {Component} from 'react'
 
 export default class Auth extends Component {
-    state = {
+    constructor() {
+        super()
+        this.state = {
         title: '',
         img: '',
         content: '',
         author: '',
         authorPicture: ''
     }
+}
 
-    getPost()
+    // getPost()
 
     render() {
         return (

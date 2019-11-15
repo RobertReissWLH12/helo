@@ -1,16 +1,20 @@
 import React from 'react';
 import './App.css';
+import routes from './routes'
+import Nav from './Components/Nav/Nav'
+import {withRouter} from 'react-router'
+import {Provider} from 'react-redux'
+import store from './ducks/store'
 
-function App() {
+function App(props) {
   return (
+    <Provider store={store}>
     <div className="App">
-      <Auth />
-      <Dashboard />
-      <Form />
-      <Post />
-      <Nav />
+      {props.location.pathname === "/" ? null : <Nav />}
+      {routes}
     </div>
+    </Provider>
   );
 }
 
-export default App;
+export default withRouter(App);

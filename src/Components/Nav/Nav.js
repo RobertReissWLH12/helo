@@ -1,15 +1,29 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
+import { Link } from "react-router-dom"
+import { connect } from 'react-redux'
+import axios from 'axios';
 
-export default class Auth extends Component {
+class Nav extends Component {
     // NO STATE OR METHODS
 
-    render() {
+    render() { 
+        console.log(this.props)
         return (
             <div className="nav">
-                Nav
+                <Link to='Dashboard'><button>Home</button></Link>
+                <Link to='/Post:postid'><button>New Post</button></Link>
+                <Link to='/'><button>Logout</button></Link>
             </div>
 
         )
     }
 }
 
+const mapStateToProps = reduxState => {
+    const { username, profile_img } = reduxState;
+    return {
+        username, profile_img
+    }
+}
+
+export default connect(mapStateToProps)(Nav)

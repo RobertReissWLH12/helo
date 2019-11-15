@@ -1,19 +1,22 @@
 import React, {Component} from 'react'
 
 export default class Form extends Component {
-    state = {
+    constructor() {
+        super()
+        this.state = {
         title: '',
         img: '',
         content: ''
     }
+}
 
-    handleChange()
+    // handleChange()
 
-    handleChange()
+    // handleChange()
 
-    handleChange()
+    // handleChange()
 
-    newPost()
+    // newPost()
 
     render() {
         return (
